@@ -1,11 +1,13 @@
 SYSTEM := $(shell uname -s)
 HOST := host.docker.internal
-DOCKER_REPO := hermeznetwork
+DOCKER_REPO := backstoptechnology
+DOCKER_USERNAME := backstoptechnology
 APP_NAME := zkevm-explorer
 BS_CONTAINER_IMAGE := $(DOCKER_REPO)/$(APP_NAME)
 BS_CONTAINER_NAME := blockscout
 PG_CONTAINER_IMAGE := postgres:14
 PG_CONTAINER_NAME := db
+LOGO := /Users/josojo/coding/forks/backstop-media-assets/logo/best_logo.png
 THIS_FILE = $(lastword $(MAKEFILE_LIST))
 TAG := $(RELEASE_VERSION)-prerelease-$(shell git log -1 --pretty=format:"%h")
 STABLE_TAG := $(RELEASE_VERSION)
